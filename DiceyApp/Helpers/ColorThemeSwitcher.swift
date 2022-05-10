@@ -8,20 +8,22 @@
 import Foundation
 import SwiftUI
 
-enum ColorSetType: Codable {
-    case main, barbarian, bard, wizard, rogue, paladin, druid, fighter, ranger
-}
 
-struct ColorSet {
-    let name: LocalizedStringKey
-    let type: ColorSetType
-    let backgroundColor: Color
-    let mainColor: Color
-    let secondaryColor: Color
-    let accentColor: Color
-}
 
 @MainActor final class ColorThemeSwitcher: ObservableObject {
+    struct ColorSet {
+        let name: LocalizedStringKey
+        let type: ColorSetType
+        let backgroundColor: Color
+        let mainColor: Color
+        let secondaryColor: Color
+        let accentColor: Color
+    }
+    
+    enum ColorSetType: Codable {
+        case main, barbarian, bard, wizard, rogue, paladin, druid, fighter, ranger
+    }
+    
     let colorThemes = [
         ColorSet(name: "main", type: .main, backgroundColor: .white, mainColor: .black, secondaryColor: Color("Secondary"), accentColor: Color("MainAccent")),
         ColorSet(name: "barbarian", type: .barbarian, backgroundColor: .white, mainColor: Color("BarbarianMain"), secondaryColor: Color("Secondary"), accentColor: Color("BarbarianAccent")),

@@ -75,9 +75,7 @@ struct SettingsView: View {
                                     }
                                 }
                                 .onAppear {
-                                    withAnimation {
-                                        proxy.scrollTo(colorSwitcher.selectedTheme, anchor: UnitPoint(x: 0.565, y: 1))
-                                    }
+                                    proxy.scrollTo(colorSwitcher.selectedTheme, anchor: UnitPoint(x: 1.05, y: 1))
                                 }
                             }
                         }

@@ -25,7 +25,14 @@ extension MainView {
         @Published var showingSettings = false
         
         var feedback = UINotificationFeedbackGenerator()
-        @Published var vibrationIsOn = true
+        @Published var vibrationIsOn = true {
+            didSet {
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(vibrationIsOn) {
+                    UserDefaults.standard.set(encoded, forKey: "Vibration")
+                }
+            }
+        }
         
         func roll() {
             let range = currentSides * diceAmount
@@ -87,6 +94,16 @@ extension MainView {
             timerIsActive = true
             objectWillChange.send()
             timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+        }
+        
+        init() {
+            if let savedVibration = UserDefaults.standard.data(forKey: "Vibration") {
+                if let decodedVibration = try? JSONDecoder().decode(Bool.self, from: savedVibration) {
+                    vibrationIsOn = decodedVibration
+                    return
+                }
+            }
+            vibrationIsOn = true
         }
     }
 }
