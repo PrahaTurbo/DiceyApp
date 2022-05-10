@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  DiceyApp
+
+  Created by Артем Ластович on 09.05.2022.
+  
+*/
+
+"dice-amount" = "количество кубиков";
+"dice-sides" = "стороны кубика";
+"roll" = "бросок";
+"settings" = "Настройки";
+"color-theme" = "Цветовая схема";
+"history" = "История";
+" sided" = "-сторонний кубик";
+" pieces" = " шт.";
+" piece" =  " шт.";
+"vibration" = "Вибрация";
+"main" = "По умолчанию";
+"barbarian" = "Варвар";
+"bard" = "Бард";
+"wizard" = "Волшебник";
+"rogue" = "Плут";
+"paladin" = "Паладин";
+"druid" = "Друид";
+"fighter" = "Воин";
+"ranger" = "Следопыт";

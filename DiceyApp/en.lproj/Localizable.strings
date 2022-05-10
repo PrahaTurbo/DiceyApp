@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  DiceyApp
+
+  Created by Артем Ластович on 09.05.2022.
+  
+*/
+
+"dice-amount" = "number of dice";
+"dice-sides" = "sides of dice";
+"roll" = "roll";
+"settings" = "Settings";
+"color-theme" = "Appearance";
+"history" = "History";
+" sided" = " sided";
+" pieces" = " pieces";
+" piece" = " piece";
+"vibration" = "Vibration";
+"main" = "Defualt";
+"barbarian" = "Barbarian";
+"bard" = "Bard";
+"wizard" = "Wizard";
+"rogue" = "Rogue";
+"paladin" = "Paladin";
+"druid" = "Druid";
+"fighter" = "Fighter";
+"ranger" = "Ranger";
