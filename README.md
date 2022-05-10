@@ -21,6 +21,7 @@ For saving history of rolls app uses CoreData and UserDefaults for saving settin
 ## Technologies Used
 * Swift 5.6
 * SwiftUI 3.0
+* CoreData
 
 ## Features
 * Roll one to six dices
