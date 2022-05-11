@@ -45,18 +45,26 @@ struct HistoryView: View {
                 .padding(.horizontal)
             }
             .toolbar {
-                Button {
-                    dismiss()
-                } label: {
-                    Image(systemName: "xmark")
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .foregroundColor(colorSwitcher.currentTheme.mainColor)
+                            .font(.caption)
+                            .padding(7)
+                            .background(colorSwitcher.currentTheme.secondaryColor)
+                            .clipShape(Circle())
+                    }
+                }
+                
+                ToolbarItem(placement: .principal) {
+                    Text("history")
+                        .bold()
                         .foregroundColor(colorSwitcher.currentTheme.mainColor)
-                        .font(.caption)
-                        .padding(7)
-                        .background(colorSwitcher.currentTheme.secondaryColor)
-                        .clipShape(Circle())
                 }
             }
-            .navigationTitle("history")
             .navigationBarTitleDisplayMode(.inline)
         }
     }

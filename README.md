@@ -3,7 +3,7 @@
 [![@artlast](https://img.shields.io/badge/telegram-%40artlast-blue)](https://t.me/artlast)
 
 # DiceyApp
-![promo_gif](https://user-images.githubusercontent.com/62947475/167604493-f766a883-9e3f-49e7-9770-b5681f415382.gif)
+![promo_gif](https://user-images.githubusercontent.com/62947475/167810502-17f26def-f10f-43a6-a349-f32a701845dd.gif)
 
 ## Table of Contents
 * [General Info](#general-information)

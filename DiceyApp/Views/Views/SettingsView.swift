@@ -96,22 +96,26 @@ struct SettingsView: View {
             }
             .background(colorSwitcher.currentTheme.backgroundColor)
             .toolbar {
-                Button {
-                    dismiss()
-                } label: {
-                    Image(systemName: "xmark")
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .foregroundColor(colorSwitcher.currentTheme.mainColor)
+                            .font(.caption)
+                            .padding(7)
+                            .background(colorSwitcher.currentTheme.secondaryColor)
+                            .clipShape(Circle())
+                    }
+                }
+                
+                ToolbarItem(placement: .principal) {
+                    Text("settings")
+                        .bold()
                         .foregroundColor(colorSwitcher.currentTheme.mainColor)
-                        .font(.caption)
-                        .padding(7)
-                        .background(colorSwitcher.currentTheme.secondaryColor)
-                        .clipShape(Circle())
                 }
             }
-            .navigationTitle("settings")
             .navigationBarTitleDisplayMode(.inline)
-            .onChange(of: colorSwitcher.selectedTheme) { _ in
-                colorSwitcher.reloadColors()
-            }
         }
     }
 }

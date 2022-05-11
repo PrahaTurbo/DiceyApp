@@ -68,12 +68,6 @@ import SwiftUI
         }
     }
     
-    func reloadColors() {
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(currentTheme.mainColor)]
-
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(currentTheme.mainColor)]
-    }
-    
     init() {
         if let savedTheme = UserDefaults.standard.data(forKey: "Theme") {
             if let decodedTheme = try? JSONDecoder().decode(ColorSetType.self, from: savedTheme) {
